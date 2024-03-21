@@ -38,7 +38,7 @@
     "ng-table-virtual-scroll": "^1.4.1",
     "ngx-echarts": "^8.0.1",
     "ngx-mat-select-search": "^4.2.1",
-    "ngx-nm-splitter": "0.0.7",
+    "ngx-nm-splitter": "0.0.8",
     "rxjs": "~7.5.0",
     "screenfull": "^6.0.2",
     "ts-md5": "^1.2.11",
