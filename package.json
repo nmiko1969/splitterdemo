@@ -39,8 +39,6 @@
     "ngx-echarts": "^8.0.1",
     "ngx-mat-select-search": "^4.2.1",
     "ngx-nm-splitter": "0.0.7",
-    "primeicons": "^6.0.1",
-    "primeng": "^13.0.0",
     "rxjs": "~7.5.0",
     "screenfull": "^6.0.2",
     "ts-md5": "^1.2.11",

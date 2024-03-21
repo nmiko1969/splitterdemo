@@ -1,3 +1,4 @@
+import { ExamplesModule } from './examples/examples.module';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,6 +12,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    ExamplesModule,
     AppRoutingModule
   ],
   providers: [],
