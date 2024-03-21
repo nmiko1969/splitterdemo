@@ -1,0 +1,89 @@
+
+<div fxLayout="column" style="width:1500px; height: 900px; overflow: auto;">
+    <div>
+        <button (click)="fixing()">Fix/moveable</button>
+    </div>
+   
+    
+<nm-splittertab fxFlex="grow" [moveable]="moveable" [splithoriz]="true" style="width:100%; height: 100%;">
+    <nm-tab  [rateSize]="50">
+        <ng-template>
+            <nm-splittertab [moveable]="moveable"  fxFlex="grow" [splithoriz]="false">
+                <nm-tab #nmt1 [fixed]="fixedfirsttwopanels" [rateSize]="200">
+                    <ng-template>
+                        <div style="width: 100%; height: 100%; background-color:red;"><button (click)="refix(nmt1)">Panel 1 1 fix/moveable, fixed:{{nmt1.fixed}}</button></div>
+                    </ng-template>
+                </nm-tab>
+                <nm-tab #nmt2 [fixed]="fixedfirsttwopanels" [rateSize]="200">
+                    <ng-template>
+                        <div style="width: 100%; height: 100%; background-color:green;"><button (click)="refix(nmt2)">Panel 1 2 fix/moveable, fixed:{{nmt2.fixed}}</button></div>
+                    </ng-template>
+                </nm-tab>
+                <nm-tab [rateSize]="10">
+                    <ng-template>
+                        <nm-splittertab [moveable]="moveable"  fxFlex="grow" [splithoriz]="true">
+                            <nm-tab #nmt3 [rateSize]="10">
+                                <ng-template>
+                                    <div style="width: 100%; height: 100%; background-color:red;"><button>Panel 1 3 1</button></div>
+                                </ng-template>
+                            </nm-tab>
+                            <nm-tab #nmt4 [rateSize]="10">
+                                <ng-template>
+                                    <div style="width: 100%; height: 100%; background-color:green;"><button>Panel 1 3 2</button></div>
+                                </ng-template>
+                            </nm-tab>
+                        </nm-splittertab>
+                                </ng-template>
+                </nm-tab>
+                <nm-tab #nmt5 [rateSize]="10">
+                    <ng-template>
+                        <div #nmpanel style="width: 100%; height: 100%; background-color:cyan;"><button>Panel 1 4</button></div>
+                    </ng-template>
+                </nm-tab>
+                <nm-tab #nmt1 [fixed]="true" [rateSize]="200">
+                    <ng-template>
+                        <div style="width: 100%; height: 100%; background-color:red;"><button>Panel 1 5</button></div>
+                    </ng-template>
+                </nm-tab>
+                <nm-tab #nmt5 [rateSize]="10">
+                    <ng-template>
+                        <div #nmpanel style="width: 100%; height: 100%; background-color:green;"><button>Panel 1 6</button></div>
+                    </ng-template>
+                </nm-tab>
+                <nm-tab #nmt5 [rateSize]="10">
+                    <ng-template>
+                        <div #nmpanel style="width: 100%; height: 100%; background-color:yellow;"><button>Panel 1 7</button></div>
+                    </ng-template>
+                </nm-tab>
+            </nm-splittertab>
+        </ng-template>
+    </nm-tab>
+    <nm-tab  [rateSize]="30">
+        <ng-template>
+            <nm-splittertab [moveable]="moveable"  fxFlex="grow" [splithoriz]="false">
+                <nm-tab #nmt6 [rateSize]="10">
+                    <ng-template>
+                        <div style="width: 100%; height: 100%; background-color:red;"><button>Panel 2 1</button></div>
+                    </ng-template>
+                </nm-tab>
+                <nm-tab #nmt7 [rateSize]="10">
+                    <ng-template>
+                        <div style="width: 100%; height: 100%; background-color:green;"><button>Panel 2 2</button></div>
+                    </ng-template>
+                </nm-tab>
+                <nm-tab #nmt8 [rateSize]="20">
+                    <ng-template>
+                        <div style="width: 100%; height: 100%; background-color:red;"><button>Panel 2 3</button></div>
+                    </ng-template>
+                </nm-tab>
+            </nm-splittertab>
+        </ng-template>
+    </nm-tab>
+    <nm-tab #nmt9  [rateSize]="20">
+        <ng-template>
+            <div #nmpanel slot="nmpanel3" style="width: 100%; height: 100%; background-color:darkkhaki;"><button>Panel 3</button></div>
+        </ng-template>
+    </nm-tab>
+</nm-splittertab>
+</div>
+<!--/div-->
