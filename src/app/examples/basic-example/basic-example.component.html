@@ -1,5 +1,5 @@
 
-<div fxLayout="column" style="width:1500px; height: 900px; overflow: auto;">
+<div fxLayout="column" style="width:900px; height: 700px; overflow: auto;">
     <div>
         <button (click)="fixing()">Fix/moveable</button>
     </div>
@@ -9,12 +9,12 @@
     <nm-tab  [rateSize]="50">
         <ng-template>
             <nm-splittertab [moveable]="moveable"  fxFlex="grow" [splithoriz]="false">
-                <nm-tab #nmt1 [fixed]="fixedfirsttwopanels" [rateSize]="200">
+                <nm-tab #nmt1 [fixed]="fixedfirsttwopanels" [rateSize]="130">
                     <ng-template>
                         <div style="width: 100%; height: 100%; background-color:red;"><button (click)="refix(nmt1)">Panel 1 1 fix/moveable, fixed:{{nmt1.fixed}}</button></div>
                     </ng-template>
                 </nm-tab>
-                <nm-tab #nmt2 [fixed]="fixedfirsttwopanels" [rateSize]="200">
+                <nm-tab #nmt2 [fixed]="fixedfirsttwopanels" [rateSize]="130">
                     <ng-template>
                         <div style="width: 100%; height: 100%; background-color:green;"><button (click)="refix(nmt2)">Panel 1 2 fix/moveable, fixed:{{nmt2.fixed}}</button></div>
                     </ng-template>
@@ -33,16 +33,16 @@
                                 </ng-template>
                             </nm-tab>
                         </nm-splittertab>
-                                </ng-template>
+                    </ng-template>
                 </nm-tab>
                 <nm-tab #nmt5 [rateSize]="10">
                     <ng-template>
                         <div #nmpanel style="width: 100%; height: 100%; background-color:cyan;"><button>Panel 1 4</button></div>
                     </ng-template>
                 </nm-tab>
-                <nm-tab #nmt1 [fixed]="true" [rateSize]="200">
+                <nm-tab #nmt1 [fixed]="true" [rateSize]="0">
                     <ng-template>
-                        <div style="width: 100%; height: 100%; background-color:red;"><button>Panel 1 5</button></div>
+                        <div style="width: 100%; height: 100%; background-color:red; white-space: nowrap;"><button>Panel 1 5 fixed, necessary size</button></div>
                     </ng-template>
                 </nm-tab>
                 <nm-tab #nmt5 [rateSize]="10">
@@ -58,17 +58,17 @@
             </nm-splittertab>
         </ng-template>
     </nm-tab>
-    <nm-tab  [rateSize]="30">
+    <nm-tab  [rateSize]="30" [minSize]="50">
         <ng-template>
-            <nm-splittertab [moveable]="moveable"  fxFlex="grow" [splithoriz]="false">
+            <nm-splittertab [moveable]="moveable" fxFlex="grow" [splithoriz]="false">
                 <nm-tab #nmt6 [rateSize]="10">
                     <ng-template>
-                        <div style="width: 100%; height: 100%; background-color:red;"><button>Panel 2 1</button></div>
+                        <div style="width: 100%; height: 100%; background-color:red;"><button>Panel 2 1</button><br>This hole row's minsize is 50px</div>
                     </ng-template>
                 </nm-tab>
-                <nm-tab #nmt7 [rateSize]="10">
+                <nm-tab #nmt7 [rateSize]="10" [minSize]="50">
                     <ng-template>
-                        <div style="width: 100%; height: 100%; background-color:green;"><button>Panel 2 2</button></div>
+                        <div style="width: 100%; height: 100%; background-color:green;"><button>Panel 2 2 : min.size=50px</button></div>
                     </ng-template>
                 </nm-tab>
                 <nm-tab #nmt8 [rateSize]="20">
@@ -86,4 +86,3 @@
     </nm-tab>
 </nm-splittertab>
 </div>
-<!--/div-->
