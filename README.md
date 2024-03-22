@@ -1,6 +1,28 @@
 # SplitterDemo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+
+<nm-splittertab>:
+    create new splitted pane.
+    Inputs:
+        [splitHoriz]: boolean, if true, then horizontal splitted pane (column). If false, then vertical (row)
+        [moveable]: boolean, if false then <nm-tab>s aren't resizeable
+<nm-tab>:
+    it's necessary the <ng-template></ng-template>
+    for example:
+        <nm-tab>
+            <ng-template>
+                <your-component></your-component>
+            </ng-template>
+        </nm-tab>
+    adding new tab to splitted pane.
+    Inputs:
+        [fixed]: boolean, if true, then size of this pane does'nt resizeable.
+        [rateSize]: number, the rate of this component. Sum of <nm-tab>'s rateSize is 100%
+            if [fixed]=true, then:
+                if [rateSize]=0 then this pane is with necessary size. Otherwise, this value is in px.
+        [minSize]: number, if it's resizeabe (not fixed), then this value is minimum size in px.
+
 
 ## Development server
 
