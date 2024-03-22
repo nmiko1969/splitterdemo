@@ -1,27 +1,27 @@
 # SplitterDemo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.<br>
 
-<nm-splittertab>:
-    create new splitted pane.
-    Inputs:
-        [splitHoriz]: boolean, if true, then horizontal splitted pane (column). If false, then vertical (row)
-        [moveable]: boolean, if false then <nm-tab>s aren't resizeable
-<nm-tab>:
-    it's necessary the <ng-template></ng-template>
-    for example:
-        <nm-tab>
-            <ng-template>
-                <your-component></your-component>
-            </ng-template>
-        </nm-tab>
-    adding new tab to splitted pane.
-    Inputs:
-        [fixed]: boolean, if true, then size of this pane does'nt resizeable.
-        [rateSize]: number, the rate of this component. Sum of <nm-tab>'s rateSize is 100%
-            if [fixed]=true, then:
-                if [rateSize]=0 then this pane is with necessary size. Otherwise, this value is in px.
-        [minSize]: number, if it's resizeabe (not fixed), then this value is minimum size in px.
+&#60;nm-splittertab&#62;:<br>
+    &#9;create new splitted pane.<br>
+    &#9;Inputs:<br>
+        &#9;&#9;[splitHoriz]: boolean, if true, then horizontal splitted pane (column). If false, then vertical (row)<br>
+        &#9;&#9;[moveable]: boolean, if false then <nm-tab>s aren't resizeable<br>
+&#60;nm-tab&#62;:<br>
+    &#9;it's necessary the &#60;ng-template&#62;&#60;/ng-template&#62;<br>
+    &#9;for example:<br>
+        &#9;&#9;&#60;nm-tab&#62;<br>
+            &#9;&#9;&#9;&#60;ng-template&#62;<br>
+                &#9;&#9;&#9;&#9;&#60;your-component&#62;&#60;/your-component&#62;<br>
+            &#9;&#9;&#9;&#60;/ng-template&#62;<br>
+        &#9;&#9;&#60;/nm-tab&#62;<br>
+    &#9;adding new tab to splitted pane.<br>
+    &#9;Inputs:<br>
+        &#9;&#9;[fixed]: boolean, if true, then size of this pane does'nt resizeable.<br>
+        &#9;&#9;[rateSize]: number, the rate of this component. Sum of <nm-tab>'s rateSize is 100%<br>
+            &#9;&#9;&#9;if [fixed]=true, then:<br>
+                &#9;&#9;&#9;&#9;if [rateSize]=0 then this pane is with necessary size. Otherwise, this value is in px.<br>
+        &#9;&#9;[minSize]: number, if it's resizeabe (not fixed), then this value is minimum size in px.<br>
 
 
 ## Development server
